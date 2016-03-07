@@ -8,9 +8,9 @@ WORKDIR /data
 
 ENV OPEN_FILE_LIMIT=32768
 
-RUN groupadd -f -g 1000 pece && \
-  useradd -u 1000 -g pece pece && \
-  mkdir -p /home/pece
+RUN groupadd -f -g 1000 node && \
+  useradd -u 1000 -g node node && \
+  mkdir -p /home/node
 
-RUN chown -R pece:pece /data && \
-  chown -R pece:pece /home/pece
+RUN chown -R node:node /data && \
+  chown -R node:node /home/node

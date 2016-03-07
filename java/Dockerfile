@@ -3,9 +3,9 @@ FROM java:openjdk-7-jre
 VOLUME ["/data"]
 WORKDIR /data
 
-RUN groupadd -f -g 1000 pece && \
-  useradd -u 1000 -g pece pece && \
-  mkdir -p /home/pece
+RUN groupadd -f -g 1000 java && \
+  useradd -u 1000 -g java java && \
+  mkdir -p /home/java
 
-RUN chown -R pece:pece /data && \
-  chown -R pece:pece /home/pece
+RUN chown -R java:java /data && \
+  chown -R java:java /home/java
